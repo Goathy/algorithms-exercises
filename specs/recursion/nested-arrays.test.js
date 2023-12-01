@@ -10,7 +10,15 @@
  */
 
 function nestedAdd(array) {
-  // write code here
+	let sum = 0
+	for (const num of array) {
+		if (Array.isArray(num)) {
+			sum += nestedAdd(num)
+		} else {
+			sum += num
+		}
+	}
+	return sum
 }
 
 test.skip("nested arrays addition", () => {
