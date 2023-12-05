@@ -16,7 +16,7 @@ function binarySearch(id, array) {
 	let end = array.length
 
 	while (start <= end) {
-		const middle = Math.floor((start + end) / 2)
+		const middle = Math.floor(start + ((end - start) / 2))
 
 		if (array[middle].id === id) {
 			return array[middle]
